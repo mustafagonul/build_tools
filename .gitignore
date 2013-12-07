@@ -1,0 +1,7 @@
+*.o
+*_ui.hpp
+*_moc.cpp
+*.dep
+
+Debug
+
