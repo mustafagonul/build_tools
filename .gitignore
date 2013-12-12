@@ -3,5 +3,6 @@
 *_moc.cpp
 *.dep
 
-Debug
+Linux_Debug
+Linux_Release
 Windows_Debug
