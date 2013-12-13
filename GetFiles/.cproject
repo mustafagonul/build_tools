@@ -86,6 +86,7 @@
 								<option id="gnu.cpp.compiler.option.preprocessor.def.726733780" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__GXX_EXPERIMENTAL_CXX0X__"/>
 								</option>
+								<option id="gnu.cpp.compiler.option.other.other.672632454" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0 -std=c++11" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.618258317" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.2071489181" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release">
@@ -141,7 +142,7 @@
 								<option id="gnu.cpp.compiler.option.include.paths.1825008118" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;P:\programming\boost\include\boost-1_55&quot;"/>
 								</option>
-								<option id="gnu.cpp.compiler.option.preprocessor.def.1794098782" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
+								<option id="gnu.cpp.compiler.option.preprocessor.def.1794098782" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__GXX_EXPERIMENTAL_CXX0X__"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1705914577" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
@@ -152,7 +153,7 @@
 								<option id="gnu.c.compiler.option.include.paths.1689576133" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;P:\programming\boost\include\boost-1_55&quot;"/>
 								</option>
-								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1112798543" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
+								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1112798543" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__GXX_EXPERIMENTAL_CXX0X__"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1946491581" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
@@ -196,6 +197,7 @@
 		<configuration configurationName="Release">
 			<resource resourceType="PROJECT" workspacePath="/GetFiles"/>
 		</configuration>
+		<configuration configurationName="Linux_Release"/>
 		<configuration configurationName="Linux_Debug">
 			<resource resourceType="PROJECT" workspacePath="/GetFiles"/>
 		</configuration>
@@ -205,6 +207,7 @@
 		<configuration configurationName="Debug">
 			<resource resourceType="PROJECT" workspacePath="/GetFiles"/>
 		</configuration>
+		<configuration configurationName="Mingw_Debug"/>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 	<storageModule moduleId="scannerConfiguration">
