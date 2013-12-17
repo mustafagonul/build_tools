@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.config.gnu.exe.debug.1270661658.1226337592.1698288161/PATH/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.exe.debug.1270661658.1226337592.1698288161/PATH/operation=replace
+environment/project/cdt.managedbuild.config.gnu.exe.debug.1270661658.1226337592.1698288161/PATH/value=P\:\\workspace\\tools\\mingw64\\4.8.2\\bin;C\:\\Program Files\\Code Collaborator Client;C\:\\Program Files (x86)\\WinMerge;C\:\\Program Files\\OpenVPN\\bin;C\:\\Program Files\\TortoiseSVN\\bin;C\:\\Program Files (x86)\\Microsoft Visual Studio 8\\Common7\\IDE;C\:\\Program Files (x86)\\Microsoft Visual Studio 8\\VC\\bin;C\:\\Python27;C\:\\Program Files (x86)\\Ant\\bin;C\:\\Windows\\system32;C\:\\Windows;C\:\\Windows\\System32\\Wbem;C\:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C\:\\Program Files (x86)\\Git\\cmd;"%PATH%"
+environment/project/cdt.managedbuild.config.gnu.exe.debug.1270661658.1226337592.1698288161/append=true
+environment/project/cdt.managedbuild.config.gnu.exe.debug.1270661658.1226337592.1698288161/appendContributed=true

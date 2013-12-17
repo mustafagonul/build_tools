@@ -1,4 +1,11 @@
-#define BOOST_NO_SCOPED_ENUMS // TODO DEPRECATED
+// TODO DEPRECATED remove later
+#include <boost/version.hpp>
+#if BOOST_VERSION >  105100
+  #define BOOST_NO_CXX11_SCOPED_ENUMS
+#else
+  #define BOOST_NO_SCOPED_ENUMS
+#endif
+
 
 #include <iostream>
 #include <boost/filesystem.hpp>
