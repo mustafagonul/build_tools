@@ -140,7 +140,7 @@
 								<option id="gnu.cpp.compiler.exe.debug.option.debugging.level.651457406" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.other.other.1711539272" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0 -std=c++11" valueType="string"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1825008118" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;P:\programming\boost\include\boost-1_55&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\..\..\libraries\mingw64\4.8.2\boost\include\boost-1_55&quot;"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.preprocessor.def.1794098782" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__GXX_EXPERIMENTAL_CXX0X__"/>
@@ -151,7 +151,7 @@
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.exe.debug.option.optimization.level.1538022232" name="Optimization Level" superClass="gnu.c.compiler.exe.debug.option.optimization.level" valueType="enumerated"/>
 								<option id="gnu.c.compiler.exe.debug.option.debugging.level.940119181" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.1689576133" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;P:\programming\boost\include\boost-1_55&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\..\..\libraries\mingw64\4.8.2\boost\include\boost-1_55&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.preprocessor.def.symbols.1112798543" name="Defined symbols (-D)" superClass="gnu.c.compiler.option.preprocessor.def.symbols" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="__GXX_EXPERIMENTAL_CXX0X__"/>
@@ -166,7 +166,7 @@
 									<listOptionValue builtIn="false" srcPrefixMapping="" srcRootPath="" value="boost_program_options-mgw48-mt-d-1_55"/>
 								</option>
 								<option id="gnu.cpp.link.option.paths.1304980815" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;P:\programming\boost\lib\boost-1_55&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\..\..\libraries\mingw64\4.8.2\boost\lib\boost-1_55&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.1757251837" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
@@ -175,7 +175,7 @@
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.exe.debug.1121502843" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.debug">
 								<option id="gnu.both.asm.option.include.paths.1054804165" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;P:\programming\boost\include\boost-1_55&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}\..\..\libraries\mingw64\4.8.2\boost\include\boost-1_55&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.510657491" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
