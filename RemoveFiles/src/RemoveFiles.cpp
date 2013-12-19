@@ -30,7 +30,7 @@ int main(int argc, char **argv)
   // no file
   if (vm.count("files") == 0) {
     std::cout << "No File!" << std::endl;
-    return 1;
+    return 0;
   }
 
   auto files = vm["files"].as<std::vector<std::string>>();
