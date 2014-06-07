@@ -16,6 +16,43 @@ namespace fs = boost::filesystem;
 namespace po = boost::program_options;
 
 
+void getFiles(fs::path const &path, std::vector<fs::path> &result)
+try {
+
+  // if path not exists simply returns
+  if (fs::exists(path) == false)
+    return;
+
+  // if file is found
+  if (fs::is_regular_file(path))
+    result.push_back(path);
+
+
+  // traversing directory
+  if (fs::is_directory(path)) {
+
+    fs::directory_iterator iter(path);
+    fs::directory_iterator end = fs::directory_iterator();
+    for (; iter != end; ++iter)
+        getFiles(*iter, result);
+  }
+}
+catch (fs::filesystem_error const& ex)
+{
+  std::cout << ex.what() << '\n';
+}
+
+bool checkFiles(fs::path const &path, std::vector<fs::path> &vector)
+{
+  for (auto item : vector)
+    if (fs::equivalent(path, item))
+      return true;
+
+  return false;
+}
+
+
+
 int main(int argc, char **argv)
 {
   po::options_description desc("Allowed options");
@@ -79,10 +116,15 @@ int main(int argc, char **argv)
   if (iniVm.count("library.file"))
     libraryFiles = iniVm["library.file"].as<std::vector<std::string>>();
 
-  // removing current sdk
-  fs::remove_all(target);
 
-  // copying header files
+
+
+
+  std::vector<fs::path> sourceFiles;
+  std::vector<fs::path> destinationFiles;
+
+
+  // header files
   for (auto file : headerFiles) {
     fs::path source = fs::current_path();
     source /= file;
@@ -100,12 +142,13 @@ int main(int argc, char **argv)
     fs::path destination = target;
     destination /=  "include";
     destination /=  file;
-    fs::create_directories(destination.parent_path());
 
-    fs::copy_file(source, destination, fs::copy_option::overwrite_if_exists);
+
+    sourceFiles.push_back(source);
+    destinationFiles.push_back(destination);
   }
 
-  // copying library files
+  // library files
   for (auto file : libraryFiles) {
     fs::path source = fs::current_path();
     source /= file;
@@ -125,7 +168,27 @@ int main(int argc, char **argv)
     destination /=  file;
     fs::create_directories(destination.parent_path());
 
-    fs::copy_file(source, destination, fs::copy_option::overwrite_if_exists);
+    sourceFiles.push_back(source);
+    destinationFiles.push_back(destination);
+  }
+
+  // removing obsolete files
+  std::vector<fs::path> targetFiles;
+  getFiles(target, targetFiles);
+  for (auto path : targetFiles)
+    if (checkFiles(path, destinationFiles) == false)
+      fs::remove(path);
+
+  // copying if there is a new version of a file
+  for (unsigned i = 0; i < sourceFiles.size(); ++i) {
+    auto source = sourceFiles[i];
+    auto destination = destinationFiles[i];
+
+    auto sourceTime = fs::last_write_time(source);
+    auto destinationTime = fs::last_write_time(destination);
+
+    if (sourceTime > destinationTime)
+      fs::copy_file(source, destination, fs::copy_option::overwrite_if_exists);
   }
 
   return 0;
