@@ -142,7 +142,7 @@ int main(int argc, char **argv)
     fs::path destination = target;
     destination /=  "include";
     destination /=  file;
-
+    fs::create_directories(destination.parent_path());
 
     sourceFiles.push_back(source);
     destinationFiles.push_back(destination);
@@ -183,6 +183,16 @@ int main(int argc, char **argv)
   for (unsigned i = 0; i < sourceFiles.size(); ++i) {
     auto source = sourceFiles[i];
     auto destination = destinationFiles[i];
+
+    if (fs::exists(source) == false) {
+      std::cout << "Not found: " << source.string() << std::endl;
+      continue;
+    }
+
+    if (fs::exists(destination) == false) {
+      fs::copy_file(source, destination);
+      continue;
+    }
 
     auto sourceTime = fs::last_write_time(source);
     auto destinationTime = fs::last_write_time(destination);
